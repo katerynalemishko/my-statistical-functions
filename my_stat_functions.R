@@ -170,4 +170,13 @@ stat_mode <- function(x){
   return(as.numeric(levels(t$x[i]))[i]) #return the maximum value/values in the frequency table in the form of a numeric vector
 }
 
+###Function 19: max_resid ####
+max_resid <- function(x){
+ chi_test<-as.data.frame(chisq.test(table(x))$stdres)
+ i<-which(chi_test$Freq==max(chi_test$Freq))
+ c<-c(as.character(chi_test$Drugs[i]))
+ c<-append(c,as.character(chi_test$Result[i]))
+ return(table(x))
+}
+
 
