@@ -163,4 +163,9 @@ high.corr <- function(x){
   return(var_names)
 }
 
+###Function 18:  stat_mode ###
+stat_mode <- function(x){
+  t <- table(x) #create a frequency table for the vector x
+  return(as.numeric(which(t==max(t)))) #return the maximum value/values in the frequency table
+}
 
