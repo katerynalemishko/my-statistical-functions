@@ -155,3 +155,17 @@ stat_mode
 This function takes as an input a numeric vector of an arbitrary length and finds the mode of the set of values in the input vector.
 The function returns a vector with the most commonly represented value from the input vector. If there are more than one most frequently represented value in the input vector, the output vector will contain all of them.
 
+
+FUNCTION 19
+max_resid
+
+This function helps to compare the efficacy of three tested drugs.
+It takes as an input a dataframe with two variables: the type of drug and the result of evaluation of its efficacy.  
+
+The variable 'Drugs' (which represents the type of drug) has three levels:drug_1, drug_2, drug_3;
+the variable 'Result' (which represent the result of evaluation of the drug efficacy) has two levels: positive, negative.
+
+The function max_resid performs chi-square test on the contengency table with the results of efficacy evaluation of different drug types. 
+The function finds the maximum value of standardized residuals and returns a vector that contains the name of the type of the drug and its evaluated efficacy which correspond to the maximum value of standardized residuals.
+
+
