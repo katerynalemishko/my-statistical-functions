@@ -2,7 +2,7 @@
 
 The R script in this repository contains the following useful statistical functions.
 
-FUNCTION1
+FUNCTION 1
 NA_position
 
 This function takes two vectors of the same length with numeric values as an input and returns TRUE if the NA positions in both vectors coincide or there are no NA values,
