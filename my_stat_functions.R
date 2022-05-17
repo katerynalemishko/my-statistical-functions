@@ -165,7 +165,9 @@ high.corr <- function(x){
 
 ###Function 18:  stat_mode ###
 stat_mode <- function(x){
-  t <- table(x) #create a frequency table for the vector x
-  return(as.numeric(which(t==max(t)))) #return the maximum value/values in the frequency table
+  t <- as.data.frame(table(x)) #create a frequency table for the vector x
+  i <- which(t$Freq==max(t$Freq))#finding the maximum value/values in the frequancy table
+  return(as.numeric(levels(t$x[i]))[as.integer(t$x[i])]) #return the maximum value/values in the frequency table in the form of a numeric vector
 }
+
 
