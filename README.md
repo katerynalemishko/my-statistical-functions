@@ -147,3 +147,11 @@ The fuction forks in the following way:
 
 > high.corr(swiss)
 [1] "Examination" "Education"
+
+
+FUNCTION 18
+stat_mode
+
+This function takes as an input a numeric vector of an arbitrary length and finds the mode of the set of values in the input vector.
+The function returns a vector with the most commonly represented value from the input vector. If there are more than one most frequently represented value in the input vector, the output vector will contain all of them.
+
