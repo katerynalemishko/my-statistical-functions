@@ -174,9 +174,8 @@ stat_mode <- function(x){
 max_resid <- function(x){
  chi_test<-as.data.frame(chisq.test(table(x))$stdres)
  i<-which(chi_test$Freq==max(chi_test$Freq))
- c<-c(as.character(chi_test$Drugs[i]))
- c<-append(c,as.character(chi_test$Result[i]))
- return(table(x))
+ c<-c(as.character(chi_test$Drugs[i]),as.character(chi_test$Result[i]))
+ return(c)
 }
 
 
