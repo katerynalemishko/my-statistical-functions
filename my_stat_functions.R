@@ -172,9 +172,9 @@ stat_mode <- function(x){
 
 ###Function 19: max_resid ####
 max_resid <- function(x){
- chi_test<-as.data.frame(chisq.test(table(x))$stdres)
- i<-which(chi_test$Freq==max(chi_test$Freq))
- c<-c(as.character(chi_test$Drugs[i]),as.character(chi_test$Result[i]))
+ chi_test<-as.data.frame(chisq.test(table(x))$stdres)#apply chi-square test to the contengency table
+ i<-which(chi_test$Freq==max(chi_test$Freq))#find the index of the maximum value of standardized residuals
+ c<-c(as.character(chi_test$Drugs[i]),as.character(chi_test$Result[i]))#create a vector that contain the column and row name corresponding to the cell with an index i
  return(c)
 }
 
